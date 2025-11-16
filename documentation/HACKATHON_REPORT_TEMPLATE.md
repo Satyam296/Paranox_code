@@ -358,13 +358,48 @@ The model detects 7 critical safety objects:
 3. Optimize for real-time inference on embedded systems
 4. Develop automated retraining pipeline with Falcon integration
 
-### 7.4 Real-World Applications
+### 7.4 Bonus Application
+
+**Interactive Streamlit Web App:**
+
+We developed a user-friendly web application (`app.py`) that demonstrates real-world deployment:
+
+**Features:**
+- 🎯 Loads trained YOLO model (best.pt)
+- 📤 Allows users to upload space station images
+- 🔍 Runs real-time detection with adjustable confidence thresholds
+- 📊 Displays annotated results with bounding boxes and confidence scores
+- 📈 Shows detailed detection statistics and class breakdowns
+
+**Demo Video:** [Include 30-60 second video showing app in action - uploading image, detection results, statistics]
+
+### 7.5 Keeping the Model Updated with Falcon
+
+**Falcon Integration Strategy:**
+
+We can keep the model up-to-date using Falcon by generating new synthetic data whenever real-world conditions change — for example if lighting, object shapes, or new safety devices appear. Falcon lets us quickly create new scenes, add new objects, simulate different environments, and regenerate datasets. We retrain the YOLO model with this updated synthetic data, ensuring the app always stays accurate.
+
+**Continuous Improvement Workflow:**
+1. **Monitor Performance:** Track model accuracy in production environments
+2. **Identify Gaps:** Detect scenarios where model performance degrades (new lighting, object variations, environmental changes)
+3. **Generate Synthetic Data:** Use Falcon to create new images matching the identified challenging conditions
+4. **Incremental Training:** Retrain model with combined original + new synthetic data
+5. **Deploy & Validate:** Update the app with improved model and verify performance gains
+
+**Benefits:**
+- ✅ No expensive real-world data collection in space environments
+- ✅ Rapid iteration on edge cases and rare scenarios
+- ✅ Simulate emergencies and equipment failures safely
+- ✅ Scale dataset as mission requirements evolve
+
+### 7.6 Real-World Applications
 
 This model can be applied to:
 1. Autonomous space station safety monitoring systems
-2. Augmented reality safety equipment identification
-3. Training simulations for astronauts
+2. Augmented reality safety equipment identification for astronauts
+3. Training simulations and educational tools
 4. Automated inventory management of safety equipment
+5. Emergency response support systems
 
 ---
 

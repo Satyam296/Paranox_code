@@ -83,7 +83,13 @@ python train.py --config ../configs/config.yaml
 python predict.py --weights runs/train/exp/weights/best.pt --config ../configs/config.yaml
 ```
 
-**📖 For detailed instructions, see [QUICK_START.md](QUICK_START.md)**
+### 5. Run Web App (Bonus)
+```bash
+pip install -r requirements_app.txt
+streamlit run app.py
+```
+
+**📖 For detailed instructions, see [RUN_APP.md](RUN_APP.md)**
 
 ---
 
@@ -134,11 +140,9 @@ Space_Station_Challenge/
 │   ├── README.md                   # Detailed project docs
 │   └── HACKATHON_REPORT_TEMPLATE.md # Report template
 │
-├── 📂 bonus_application/            # Bonus real-time app
-│   ├── safety_monitor_app.py       # Main application
-│   └── APPLICATION_PROPOSAL.md     # Detailed proposal
-│
-├── 📄 QUICK_START.md               # Quick start guide
+├── 📄 app.py                       # Streamlit web application
+├── 📄 requirements_app.txt         # App dependencies
+├── 📄 RUN_APP.md                   # App instructions
 └── 📄 README.md                    # This file
 ```
 
