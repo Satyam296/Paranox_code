@@ -1,0 +1,70 @@
+# Space Station Challenge - YOLO Configuration File
+# Update the paths below to match your dataset location
+
+# Dataset paths
+path: E:/Planet_ML  # Root directory of your dataset
+train: train_1/train1/images  # Training images directory (relative to 'path')
+val: train_1/val1/images      # Validation images directory (relative to 'path')
+test: test3/images    # Test images directory (relative to 'path')
+
+# Number of classes
+nc: 7
+
+# Class names (Space Station Safety Objects)
+names:
+  0: OxygenTank
+  1: NitrogenTank
+  2: FirstAidBox
+  3: SafetySwitchPanel
+  4: FireExtinguisher
+  5: FireAlarm
+  6: EmergencyPhone
+
+# Training hyperparameters
+# Modify these to optimize your model performance
+epochs: 15            # Number of training epochs
+batch: 16             # Batch size (reduce if you have memory issues)
+imgsz: 640            # Image size for training
+patience: 50          # Early stopping patience
+workers: 8            # Number of dataloader workers
+
+# Model configuration
+model: yolov8n.pt     # Starting model (yolov8n.pt, yolov8s.pt, yolov8m.pt, yolov8l.pt, yolov8x.pt)
+                      # n=nano (fastest), s=small, m=medium, l=large, x=extra large (most accurate)
+
+# Optimization parameters
+optimizer: auto       # Optimizer (SGD, Adam, AdamW, auto)
+lr0: 0.01             # Initial learning rate
+lrf: 0.01             # Final learning rate (lr0 * lrf)
+momentum: 0.937       # SGD momentum
+weight_decay: 0.0005  # Optimizer weight decay
+
+# Augmentation parameters
+hsv_h: 0.015          # HSV-Hue augmentation
+hsv_s: 0.7            # HSV-Saturation augmentation
+hsv_v: 0.4            # HSV-Value augmentation
+degrees: 0.0          # Image rotation (+/- deg)
+translate: 0.1        # Image translation (+/- fraction)
+scale: 0.5            # Image scale (+/- gain)
+shear: 0.0            # Image shear (+/- deg)
+perspective: 0.0      # Image perspective (+/- fraction)
+flipud: 0.0           # Flip up-down (probability)
+fliplr: 0.5           # Flip left-right (probability)
+mosaic: 1.0           # Mosaic augmentation (probability)
+mixup: 0.0            # MixUp augmentation (probability)
+
+# Advanced settings
+device: ''            # CUDA device ('' for auto, '0' for GPU 0, 'cpu' for CPU only)
+save: True            # Save checkpoints
+save_period: -1       # Save checkpoint every x epochs (-1 to disable)
+project: runs/train   # Project directory
+name: exp             # Experiment name
+exist_ok: False       # Overwrite existing experiment
+pretrained: True      # Use pretrained weights
+verbose: True         # Verbose output
+deterministic: True   # Deterministic mode
+single_cls: False     # Train as single-class dataset
+rect: False           # Rectangular training
+cos_lr: False         # Use cosine learning rate scheduler
+close_mosaic: 10      # Disable mosaic augmentation for final epochs
+amp: True             # Automatic Mixed Precision training

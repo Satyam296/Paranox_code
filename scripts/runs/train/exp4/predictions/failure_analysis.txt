@@ -1,0 +1,36 @@
+======================================================================
+FAILURE CASE ANALYSIS
+======================================================================
+
+Common Issues to Consider:
+
+1. OCCLUSION
+   - Objects partially hidden by other objects
+   - Solution: Add more occluded examples to training data
+
+2. LIGHTING CONDITIONS
+   - Poor performance in very dark or very light conditions
+   - Solution: Enhance lighting augmentation, add more varied lighting
+
+3. OBJECT SIZE
+   - Small or distant objects are harder to detect
+   - Solution: Use multi-scale training, adjust anchor boxes
+
+4. CLASS CONFUSION
+   - Similar-looking objects misclassified
+   - Solution: Add more diverse examples, focus on distinctive features
+
+5. OBJECT OVERLAP
+   - Multiple objects of same class close together
+   - Solution: Adjust NMS threshold, improve bounding box precision
+
+======================================================================
+
+RECOMMENDATIONS FOR IMPROVEMENT:
+----------------------------------------------------------------------
+- Increase training epochs
+- Try a larger model (e.g., yolov8m or yolov8l)
+- Adjust data augmentation parameters
+- Collect more training data using Falcon
+- Fine-tune confidence and IoU thresholds
+======================================================================

@@ -1,0 +1,62 @@
+======================================================================
+SPACE STATION CHALLENGE - MODEL EVALUATION REPORT
+======================================================================
+
+Evaluation Date: 2025-11-16 06:07:30
+
+OVERALL METRICS
+----------------------------------------------------------------------
+mAP@0.5:        0.5467
+mAP@0.5:0.95:   0.4218
+Precision:      0.8226
+Recall:         0.4716
+F1-Score:       0.5995
+
+PER-CLASS METRICS
+----------------------------------------------------------------------
+
+OxygenTank:
+  Precision: 0.8956
+  Recall:    0.6291
+  mAP@0.5:   0.5717
+
+NitrogenTank:
+  Precision: 0.8217
+  Recall:    0.5586
+  mAP@0.5:   0.5268
+
+FirstAidBox:
+  Precision: 0.7927
+  Recall:    0.5795
+  mAP@0.5:   0.5344
+
+SafetySwitchPanel:
+  Precision: 0.8317
+  Recall:    0.3273
+  mAP@0.5:   0.3010
+
+FireExtinguisher:
+  Precision: 0.8270
+  Recall:    0.4247
+  mAP@0.5:   0.3560
+
+FireAlarm:
+  Precision: 0.7693
+  Recall:    0.3568
+  mAP@0.5:   0.2750
+
+EmergencyPhone:
+  Precision: 0.8204
+  Recall:    0.4252
+  mAP@0.5:   0.3877
+
+======================================================================
+BENCHMARK COMPARISON
+======================================================================
+Target Benchmarks:
+  mAP@0.5:  40-50% (Baseline), >70% (Excellent)
+  Precision: >70% (Best models)
+  Recall:    >70% (Best models)
+
+Your Model Performance: GOOD
+======================================================================
